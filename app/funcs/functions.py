@@ -3,7 +3,6 @@ def read_file(filepath):
         return file.readlines()
 
 
-
 def filter_data(data, val):
     return filter(lambda x: val in x, data)
 
@@ -20,3 +19,10 @@ def sort_data(data, val):
         return sorted(data, reverse=True)
 
 
+def limit_data(data, val):
+    limit = int(val)
+    return list(data)[:limit]
+
+
+def unique_data(data):
+    return set(data)
